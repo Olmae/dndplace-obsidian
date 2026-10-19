@@ -1,0 +1,9 @@
+{
+  "id": "dndplace-sync",
+  "name": "DNDPlace Sync",
+  "version": "0.1.0",
+  "minAppVersion": "1.11.4",
+  "description": "Sync DNDPlace campaign notes and images with reviewed transfers, history and optional automatic exchange.",
+  "author": "Olmae",
+  "isDesktopOnly": true
+}

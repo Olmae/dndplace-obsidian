@@ -1,0 +1,279 @@
+[
+  {
+    "name": "wrong protocol version",
+    "kind": "connection",
+    "value": {
+      "protocolVersion": 2,
+      "instanceId": "site",
+      "account": {
+        "id": "user",
+        "name": "DM"
+      },
+      "capabilities": [
+        "archive.read"
+      ],
+      "limits": {
+        "batchNotes": 32,
+        "batchBytes": 33554432,
+        "pageSize": 50,
+        "pageBytes": 16777216,
+        "noteBytes": 1048576,
+        "imageBytes": 10485760,
+        "uploadBytes": 104857600,
+        "expandedBytes": 209715200,
+        "entries": 2000,
+        "folderDepth": 20
+      },
+      "readiness": {
+        "read": true,
+        "write": false,
+        "missing": []
+      }
+    }
+  },
+  {
+    "name": "invalid source hash",
+    "kind": "baseVersion",
+    "value": {
+      "entityId": "note",
+      "revision": 1,
+      "sourceHash": "oops"
+    }
+  },
+  {
+    "name": "negative revision",
+    "kind": "baseVersion",
+    "value": {
+      "entityId": "note",
+      "revision": -1,
+      "sourceHash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+    }
+  },
+  {
+    "name": "unsafe identifier",
+    "kind": "baseVersion",
+    "value": {
+      "entityId": "../foreign",
+      "revision": 1,
+      "sourceHash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+    }
+  },
+  {
+    "name": "unconfirmed apply",
+    "kind": "applyRequest",
+    "value": {
+      "planId": "plan",
+      "planHash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "operationId": "00000000-0000-4000-8000-000000000000",
+      "confirmed": false
+    }
+  },
+  {
+    "name": "missing account",
+    "kind": "connection",
+    "value": {
+      "protocolVersion": 1,
+      "instanceId": "site",
+      "account": null,
+      "capabilities": [
+        "archive.read"
+      ],
+      "limits": {
+        "batchNotes": 32,
+        "batchBytes": 33554432,
+        "pageSize": 50,
+        "pageBytes": 16777216,
+        "noteBytes": 1048576,
+        "imageBytes": 10485760,
+        "uploadBytes": 104857600,
+        "expandedBytes": 209715200,
+        "entries": 2000,
+        "folderDepth": 20
+      },
+      "readiness": {
+        "read": true,
+        "write": false,
+        "missing": []
+      }
+    }
+  },
+  {
+    "name": "write without read readiness",
+    "kind": "connection",
+    "value": {
+      "protocolVersion": 1,
+      "instanceId": "site",
+      "account": {
+        "id": "user",
+        "name": "DM"
+      },
+      "capabilities": [
+        "archive.read"
+      ],
+      "limits": {
+        "batchNotes": 32,
+        "batchBytes": 33554432,
+        "pageSize": 50,
+        "pageBytes": 16777216,
+        "noteBytes": 1048576,
+        "imageBytes": 10485760,
+        "uploadBytes": 104857600,
+        "expandedBytes": 209715200,
+        "entries": 2000,
+        "folderDepth": 20
+      },
+      "readiness": {
+        "read": false,
+        "write": true,
+        "missing": []
+      }
+    }
+  },
+  {
+    "name": "unreceipted commit",
+    "kind": "transfer",
+    "value": {
+      "id": "t",
+      "bindingId": "bind",
+      "clientTransferId": "client",
+      "deviceId": "device",
+      "packageHash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "state": "applied",
+      "expiresAt": "2026-10-19T12:00:00.000Z",
+      "planId": null,
+      "planHash": null,
+      "operationId": null,
+      "receipt": null
+    }
+  },
+  {
+    "name": "mixed plan identity",
+    "kind": "transfer",
+    "value": {
+      "id": "t",
+      "bindingId": "bind",
+      "clientTransferId": "client",
+      "deviceId": "device",
+      "packageHash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "state": "reserved",
+      "expiresAt": "2026-10-19T12:00:00.000Z",
+      "planId": "plan",
+      "planHash": null,
+      "operationId": null,
+      "receipt": null
+    }
+  },
+  {
+    "name": "invalid date",
+    "kind": "transfer",
+    "value": {
+      "id": "t",
+      "bindingId": "bind",
+      "clientTransferId": "client",
+      "deviceId": "device",
+      "packageHash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "state": "reserved",
+      "expiresAt": "2026-99-19T12:00:00.000Z",
+      "planId": null,
+      "planHash": null,
+      "operationId": null,
+      "receipt": null
+    }
+  },
+  {
+    "name": "unknown kind",
+    "kind": "__proto__",
+    "value": {}
+  },
+  {
+    "name": "reservation cannot supply audit source",
+    "kind": "reserveRequest",
+    "value": {
+      "deviceId": "device",
+      "clientTransferId": "transfer",
+      "packageHash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "source": "site"
+    }
+  },
+  {
+    "name": "replacement base cannot omit source hash",
+    "kind": "prepareRequest",
+    "value": {
+      "baseVersions": [
+        {
+          "entityId": "note",
+          "revision": 2
+        }
+      ],
+      "choices": []
+    }
+  },
+  {
+    "name": "review cannot disclose raw prepared effects",
+    "kind": "reviewPlan",
+    "value": {
+      "planId": "plan",
+      "planHash": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+      "bindingId": "binding",
+      "archiveRevision": 2,
+      "expiresAt": "2026-10-20T12:00:00.000Z",
+      "stale": false,
+      "rows": [],
+      "totals": {
+        "created": 0,
+        "updated": 0,
+        "skipped": 0,
+        "folders": 0
+      },
+      "diagnostics": [],
+      "effects": []
+    }
+  },
+  {
+    "name": "history cannot expose user email",
+    "kind": "historyPage",
+    "value": {
+      "protocolVersion": 1,
+      "rows": [
+        {
+          "id": 1,
+          "entityType": "note",
+          "entityId": "note",
+          "revision": 1,
+          "deleted": false,
+          "source": "obsidian",
+          "actor": {
+            "id": "dm",
+            "name": "Master",
+            "email": "private@example.test"
+          },
+          "createdAt": "2026-10-18T12:00:00.000Z"
+        }
+      ],
+      "nextCursor": null
+    }
+  },
+  {
+    "name": "history rejects impossible timestamp",
+    "kind": "historyPage",
+    "value": {
+      "protocolVersion": 1,
+      "rows": [
+        {
+          "id": 1,
+          "entityType": "note",
+          "entityId": "note",
+          "revision": 1,
+          "deleted": false,
+          "source": "obsidian",
+          "actor": {
+            "id": "dm",
+            "name": "Master"
+          },
+          "createdAt": "2026-02-30T12:00:00.000Z"
+        }
+      ],
+      "nextCursor": null
+    }
+  }
+]

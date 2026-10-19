@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" color="#c6a56b" role="img" aria-label="DNDPlace — d20">
+<g transform="scale(1.5625)" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+<path d="M32 3 54 14l6 25-12 19H16L4 39l6-25Z" stroke-width="1.6"/>
+<path d="M32 7 51 17l5 21-10 16H18L8 38l5-21Z" stroke-width=".8" opacity=".45"/>
+<path d="m32 13 17 12-5 22-12 5-12-5-5-22Zm0 0-8 22h16Zm-17 12 9 10-4 12m29-22-9 10 4 12M24 35l8 17 8-17" stroke-width="1.8"/>
+<path d="M28 6l4 3 4-3M10 37l4 3-3 5M54 37l-4 3 3 5M26 56h12" stroke-width=".8" opacity=".65"/>
+<g fill="currentColor" stroke="none"><circle cx="12" cy="17" r="1.4"/><circle cx="52" cy="17" r="1.4"/><circle cx="17" cy="54" r="1.4"/><circle cx="47" cy="54" r="1.4"/></g>
+</g>
+</svg>

@@ -1,0 +1,305 @@
+[
+  {
+    "name": "valid syncIdentity",
+    "kind": "syncIdentity",
+    "value": {
+      "connectionId": "conn",
+      "instanceId": "site",
+      "accountId": "user",
+      "campaignId": "camp",
+      "bindingId": "bind"
+    }
+  },
+  {
+    "name": "valid principal",
+    "kind": "principal",
+    "value": {
+      "keyId": "key",
+      "actorId": "user"
+    }
+  },
+  {
+    "name": "valid binding",
+    "kind": "binding",
+    "value": {
+      "id": "bind",
+      "campaignId": "camp",
+      "ownerId": "user",
+      "sourceBindingId": "source",
+      "destinationFolderId": null,
+      "revision": 1,
+      "name": "One-shot"
+    }
+  },
+  {
+    "name": "valid connection",
+    "kind": "connection",
+    "value": {
+      "protocolVersion": 1,
+      "instanceId": "site",
+      "account": {
+        "id": "user",
+        "name": "DM"
+      },
+      "capabilities": [
+        "archive.read"
+      ],
+      "limits": {
+        "batchNotes": 32,
+        "batchBytes": 33554432,
+        "pageSize": 50,
+        "pageBytes": 16777216,
+        "noteBytes": 1048576,
+        "imageBytes": 10485760,
+        "uploadBytes": 104857600,
+        "expandedBytes": 209715200,
+        "entries": 2000,
+        "folderDepth": 20
+      },
+      "readiness": {
+        "read": true,
+        "write": false,
+        "missing": []
+      }
+    }
+  },
+  {
+    "name": "valid baseVersion",
+    "kind": "baseVersion",
+    "value": {
+      "entityId": "note",
+      "revision": 1,
+      "sourceHash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+    }
+  },
+  {
+    "name": "valid applyRequest",
+    "kind": "applyRequest",
+    "value": {
+      "planId": "plan",
+      "planHash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "operationId": "00000000-0000-4000-8000-000000000000",
+      "confirmed": true
+    }
+  },
+  {
+    "name": "valid asset",
+    "kind": "asset",
+    "value": {
+      "id": "asset",
+      "mime": "image/png",
+      "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "byteSize": 20,
+      "relativePath": "_assets/dndplace/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.png"
+    }
+  },
+  {
+    "name": "valid indexPage",
+    "kind": "indexPage",
+    "value": {
+      "protocolVersion": 1,
+      "archiveRevision": 2,
+      "highWater": 4,
+      "rows": [
+        {
+          "id": "note",
+          "title": "Scene",
+          "folderId": null,
+          "revision": 1,
+          "hasBoard": false
+        }
+      ],
+      "folders": [],
+      "nextCursor": null
+    }
+  },
+  {
+    "name": "valid document",
+    "kind": "document",
+    "value": {
+      "protocolVersion": 1,
+      "id": "note",
+      "revision": 1,
+      "title": "Scene",
+      "markdown": "# Scene",
+      "sourceHash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "projectionHash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "metadata": {
+        "icon": "📜",
+        "favorite": false
+      },
+      "assets": [],
+      "board": null,
+      "diagnostics": []
+    }
+  },
+  {
+    "name": "valid changePage",
+    "kind": "changePage",
+    "value": {
+      "protocolVersion": 1,
+      "highWater": 4,
+      "changes": [],
+      "nextCursor": null,
+      "checkpoint": "YQ",
+      "rescanRequired": false
+    }
+  },
+  {
+    "name": "valid transfer",
+    "kind": "transfer",
+    "value": {
+      "id": "t",
+      "bindingId": "bind",
+      "clientTransferId": "client",
+      "deviceId": "device",
+      "packageHash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "state": "reserved",
+      "expiresAt": "2026-10-19T12:00:00.000Z",
+      "planId": null,
+      "planHash": null,
+      "operationId": null,
+      "receipt": null
+    }
+  },
+  {
+    "name": "valid cursor",
+    "kind": "cursor",
+    "value": {
+      "v": 1,
+      "kind": "index",
+      "connectionId": "conn",
+      "instanceId": "site",
+      "accountId": "user",
+      "campaignId": "camp",
+      "bindingId": "bind",
+      "highWater": 4,
+      "offset": 0,
+      "archiveRevision": 2
+    }
+  },
+  {
+    "name": "valid campaigns",
+    "kind": "campaigns",
+    "value": [
+      {
+        "id": "camp",
+        "name": "Campaign",
+        "capabilities": [
+          "archive.read"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "valid bindings",
+    "kind": "bindings",
+    "value": [
+      {
+        "id": "bind",
+        "campaignId": "camp",
+        "ownerId": "user",
+        "sourceBindingId": "source",
+        "destinationFolderId": null,
+        "revision": 1,
+        "name": "One-shot"
+      }
+    ]
+  },
+  {
+    "name": "bounded transfer reservation",
+    "kind": "reserveRequest",
+    "value": {
+      "deviceId": "device",
+      "clientTransferId": "transfer",
+      "packageHash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+    }
+  },
+  {
+    "name": "reviewed client bases",
+    "kind": "prepareRequest",
+    "value": {
+      "baseVersions": [
+        {
+          "entityId": "note",
+          "revision": 2,
+          "sourceHash": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+        }
+      ],
+      "choices": [
+        {
+          "path": "Room.md",
+          "action": "replace",
+          "targetId": "note",
+          "expectedRevision": 2
+        }
+      ]
+    }
+  },
+  {
+    "name": "immutable transfer review",
+    "kind": "reviewPlan",
+    "value": {
+      "planId": "plan",
+      "planHash": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+      "bindingId": "binding",
+      "archiveRevision": 2,
+      "expiresAt": "2026-10-20T12:00:00.000Z",
+      "stale": false,
+      "rows": [],
+      "totals": {
+        "created": 0,
+        "updated": 0,
+        "skipped": 0,
+        "folders": 0
+      },
+      "diagnostics": []
+    }
+  },
+  {
+    "name": "history page with actor and trusted source",
+    "kind": "historyPage",
+    "value": {
+      "protocolVersion": 1,
+      "rows": [
+        {
+          "id": 1,
+          "entityType": "note",
+          "entityId": "note",
+          "revision": 1,
+          "deleted": false,
+          "source": "obsidian",
+          "actor": {
+            "id": "dm",
+            "name": "Master"
+          },
+          "createdAt": "2026-10-18T12:00:00.000Z"
+        }
+      ],
+      "nextCursor": null
+    }
+  },
+  {
+    "name": "historical baseline is a recognized source",
+    "kind": "historyPage",
+    "value": {
+      "protocolVersion": 1,
+      "rows": [
+        {
+          "id": 1,
+          "entityType": "note",
+          "entityId": "note",
+          "revision": 1,
+          "deleted": false,
+          "source": "baseline",
+          "actor": {
+            "id": "dm",
+            "name": "Master"
+          },
+          "createdAt": "2026-10-18T12:00:00.000Z"
+        }
+      ],
+      "nextCursor": null
+    }
+  }
+]
